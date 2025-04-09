@@ -23,3 +23,9 @@ export interface SearchParams {
   page: number;
   limit: number;
 }
+
+export interface CategoryParams {
+  categoryId: string;
+  page: number;
+  limit: number;
+}
