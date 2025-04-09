@@ -180,7 +180,7 @@ export function useVideos(page: number = 1) {
   return useQuery({
     queryKey: ["videos", page],
     queryFn: () => fetchVideos(page),
-    keepPreviousData: true,
+    placeholderData: (previousData) => previousData,
     staleTime: 5 * 60 * 1000, // 5 minutes
   });
 }

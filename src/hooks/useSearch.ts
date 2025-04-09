@@ -52,7 +52,7 @@ export function useSearch(searchText: string, page: number = 1, limit: number = 
     queryKey: ["search", searchText, page, limit],
     queryFn: () => searchVideos({ searchText, page, limit }),
     enabled: searchText.length > 0,
-    keepPreviousData: true,
+    placeholderData: (previousData) => previousData,
   });
 }
 
